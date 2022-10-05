@@ -28,17 +28,21 @@ html {
 }
 
 #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 46.5px;
     background-color: black;
+    z-index: 1;
 }
 
 #nav {
-
+    display: inline-block;
 }
 
 #nav li {
     display: inline-block;
-    padding: 0 24px;
     position: relative;
 }
 
@@ -66,30 +70,66 @@ html {
 #nav .subnav a {
     color: black;
     line-height: 38.5px;
+    padding: 0 100% 0 16px;
 }
 
 #nav .subnav li {
     display: block;
     height: 38.5px;
     min-width: 160px;
-    padding: 0 16px;
 }
 
 #nav > li > a {
+    padding: 0 24px;
     color: white;
     text-transform: uppercase;
+    line-height: 46.5px;
 }
 
 #nav li  a {
     text-decoration: none;
-    line-height: 46.5px;
+}
 
+#header .search-btn {
+    float: right;
+    padding: 0 23px;
+    cursor: pointer;
+}
+
+#header .search-btn .icon-search{
+    color: white;
+    line-height: 46.5px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336
 }
 
 #slider {
-    min-height: 500px;
-    /* background-color: #333; */
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url('/assets/img/slider.jpg') top center / cover no-repeat;
 }
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+#slider .text-heading{
+    text-align: center;
+    font-size: 24px;
+}
+
+#slider .text-description{
+    margin-top: 25px;
+    font-size: 15px;
+}
+
 
 #content {
 
